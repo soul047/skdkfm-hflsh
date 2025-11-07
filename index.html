@@ -1,39 +1,52 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enigma Machine Simulator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="enigma-machine">
-        <h1>Enigma Machine</h1>
-        <div class="settings">
-            <div class="rotor-settings">
-                <label>Rotor I: <select id="rotor1-pos"></select></label>
-                <label>Rotor II: <select id="rotor2-pos"></select></label>
-                <label>Rotor III: <select id="rotor3-pos"></select></label>
+<div class="visualizer-panel">
+            <h3>Signal Path Visualization</h3>
+            <div id="path-visualizer">
+                <div class="path-step">
+                    <div>Input</div>
+                    <div class="path-char" id="vis-input">-</div>
+                </div>
+                <div class="path-arrow">&rarr;</div>
+                <div class="path-step">
+                    <div>Rotor I</div>
+                    <div class="path-char" id="vis-r1">-</div>
+                </div>
+                <div class="path-arrow">&rarr;</div>
+                <div class="path-step">
+                    <div>Rotor II</div>
+                    <div class="path-char" id="vis-r2">-</div>
+                </div>
+                <div class="path-arrow">&rarr;</div>
+                <div class="path-step">
+                    <div>Rotor III</div>
+                    <div class="path-char" id="vis-r3">-</div>
+                </div>
+                <div class="path-arrow">&rarr;</div>
+                <div class="path-step">
+                    <div>Reflector</div>
+                    <div class="path-char" id="vis-ref">-</div>
+                </div>
+                <div class="path-arrow">&rarr;</div>
+                <div class="path-step">
+                    <div>Rotor III (R)</div>
+                    <div class="path-char" id="vis-r3r">-</div>
+                </div>
+                <div class="path-arrow">&rarr;</div>
+                <div class="path-step">
+                    <div>Rotor II (R)</div>
+                    <div class="path-char" id="vis-r2r">-</div>
+                </div>
+                <div class="path-arrow">&rarr;</div>
+                <div class="path-step">
+                    <div>Rotor I (R)</div>
+                    <div class="path-char" id="vis-r1r">-</div>
+                </div>
+                <div class="path-arrow">&rarr;</div>
+                <div class="path-step">
+                    <div>Output</div>
+                    <div class="path-char" id="vis-output">-</div>
+                </div>
             </div>
-            <button id="reset-button">Reset</button>
         </div>
-        <div class="display-panel">
-            <div id="lampboard" class="keyboard"></div>
-        </div>
-        <div class="keyboard-panel">
-            <div id="keyboard" class="keyboard"></div>
-        </div>
-        <div class="text-areas">
-            <div class="textarea-group">
-                <label for="input-text">Input (Plaintext)</label>
-                <textarea id="input-text" readonly></textarea>
-            </div>
-            <div class="textarea-group">
-                <label for="output-text">Output (Ciphertext)</label>
-                <textarea id="output-text" readonly></textarea>
-            </div>
-        </div>
-    </div>
-    <script src="script.js"></script>
+        </div> <script src="script.js"></script>
 </body>
 </html>

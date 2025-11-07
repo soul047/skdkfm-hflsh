@@ -116,3 +116,50 @@ textarea {
     padding: 10px;
     box-sizing: border-box;
 }
+
+/* ▼▼▼ 이 부분을 새로 추가 ▼▼▼ */
+.visualizer-panel {
+    background-color: #3a3a3a;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+.visualizer-panel h3 {
+    text-align: center;
+    margin: 5px 0 15px 0;
+    color: #ffd700;
+}
+
+#path-visualizer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.path-step {
+    text-align: center;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.path-char {
+    background-color: #2c2c2c;
+    border: 1px solid #555;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    margin-top: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.path-arrow {
+    font-size: 1.5em;
+    color: #888;
+}
+/* ▲▲▲ 여기까지 추가 ▲▲▲ */
