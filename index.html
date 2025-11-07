@@ -1,4 +1,58 @@
-<div class="visualizer-panel">
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="enigma-machine">
+        <h1>Enigma Machine</h1>
+        <div class="settings">
+            <div class="rotor-settings">
+                <label>Rotor I: <select id="rotor1-pos"></select></label>
+                <label>Rotor II: <select id="rotor2-pos"></select></label>
+                <label>Rotor III: <select id="rotor3-pos"></select></label>
+            </div>
+            
+            <div class="rotor-visuals">
+                <div class="rotor-housing">
+                    <div class="rotor-window">
+                        <div class="rotor-tape" id="rotor-tape-1"></div>
+                    </div>
+                </div>
+                <div class="rotor-housing">
+                    <div class="rotor-window">
+                        <div class="rotor-tape" id="rotor-tape-2"></div>
+                    </div>
+                </div>
+                <div class="rotor-housing">
+                    <div class="rotor-window">
+                        <div class="rotor-tape" id="rotor-tape-3"></div>
+                    </div>
+                </div>
+            </div>
+            <button id="reset-button">Reset</button>
+        </div>
+        <div class="display-panel">
+            <div id="lampboard" class="keyboard"></div>
+        </div>
+        <div class="keyboard-panel">
+            <div id="keyboard" class="keyboard"></div>
+        </div>
+        <div class="text-areas">
+            <div class="textarea-group">
+                <label for="input-text">Input (Plaintext)</label>
+                <textarea id="input-text" readonly></textarea>
+            </div>
+            <div class="textarea-group">
+                <label for="output-text">Output (Ciphertext)</label>
+                <textarea id="output-text" readonly></textarea>
+            </div>
+        </div>
+
+        <div class="visualizer-panel">
             <h3>Signal Path Visualization</h3>
             <div id="path-visualizer">
                 <div class="path-step">

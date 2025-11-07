@@ -32,6 +32,7 @@ h1 {
     background: #3a3a3a;
     padding: 10px;
     border-radius: 5px;
+flex-wrap: wrap; /* 요소들이 여러 줄에 걸쳐 정렬되도록 함 */
 }
 
 .settings label {
@@ -162,4 +163,63 @@ textarea {
     font-size: 1.5em;
     color: #888;
 }
-/* ▲▲▲ 여기까지 추가 ▲▲▲ */
+
+.rotor-settings {
+    width: 100%; /* 설정 드롭다운이 꽉 차게 */
+    margin-bottom: 15px;
+}
+
+.rotor-visuals {
+    display: flex;
+    justify-content: space-around;
+    width: 70%; /* 리셋 버튼 옆 공간을 차지 */
+}
+
+.rotor-housing {
+    text-align: center;
+}
+
+/* 로터의 '창' (현재 글자만 보임) */
+.rotor-window {
+    width: 50px;
+    height: 60px; /* 20px짜리 글자 3개를 보여줄 높이 */
+    background-color: #2c2c2c;
+    border: 2px solid #222;
+    border-radius: 5px;
+    overflow: hidden; /* 이 창 밖의 글자들은 숨김 */
+    position: relative;
+    font-size: 1.2em;
+    line-height: 20px; /* 글자 하나의 높이 */
+}
+
+/* 현재 위치를 가리키는 노란색 화살표 */
+.rotor-window::before {
+    content: '►';
+    color: #ffd700;
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    z-index: 10;
+}
+
+/* 알파벳 '테이프' (Z-A-B-C-D...) */
+.rotor-tape {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 이 transition이 회전 애니메이션을 만듭니다! */
+    transition: transform 0.2s ease-in-out; 
+}
+
+/* 테이프 안의 개별 알파벳 */
+.rotor-tape span {
+    width: 100%;
+    height: 20px; /* 창의 line-height와 일치 */
+    text-align: center;
+    color: #f0f0f0;
+    font-weight: bold;
+    flex-shrink: 0; /* 글자가 찌그러지지 않게 함 */
+}
