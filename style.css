@@ -1,0 +1,118 @@
+body {
+    background-color: #333;
+    color: #f0f0f0;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.enigma-machine {
+    background-color: #4a4a4a;
+    border: 5px solid #222;
+    border-radius: 10px;
+    padding: 20px;
+    width: 800px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+    color: #ffd700;
+}
+
+.settings {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #3a3a3a;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.settings label {
+    margin: 0 10px;
+}
+
+.settings select {
+    background-color: #555;
+    color: white;
+    border: 1px solid #777;
+}
+
+#reset-button {
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reset-button:hover {
+    background-color: #e74c3c;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 8px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.key {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #222;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    background-color: #666;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.1s, box-shadow 0.1s;
+}
+
+#keyboard .key:hover {
+    background-color: #777;
+}
+
+#lampboard .key {
+    background-color: #2c2c2c;
+    color: #555;
+    cursor: default;
+}
+
+#lampboard .key.lit {
+    background-color: #ffd700;
+    color: #333;
+    box-shadow: 0 0 25px #ffd700, 0 0 10px #fff;
+}
+
+.text-areas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.textarea-group {
+    width: 48%;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    background-color: #2c2c2c;
+    color: #f0f0f0;
+    border: 2px solid #555;
+    border-radius: 5px;
+    font-size: 1.2em;
+    padding: 10px;
+    box-sizing: border-box;
+}
